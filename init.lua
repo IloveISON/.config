@@ -33,3 +33,6 @@ require('mini.tabline').setup({
     }
 })
 require('mini.sessions').setup()
+
+
+-- For test purposes
