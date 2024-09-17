@@ -11,7 +11,11 @@ vim.g.mapleader = ' '
 -- vim.keymap.set('n', '<leader>p', ':tabprevious<CR>', { noremap = true, silent = true })
 -- vim.keymap.set('n', '<leader>n', ':tabnext<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>y', '"+yy<CR>', { noremap = true, silent = true })
+
+
+-- Setting <Left Alt> key
 vim.api.nvim_set_keymap('n', '<A-h>', ':echo "Alt+H pressed"<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>p', ':echo "Leader key testing"<CR>', { noremap = true, silent = true })
 
 -- Remap Alt+w to behave like Ctrl+w
 vim.api.nvim_set_keymap('n', '<A-w>', '<C-w>', { noremap = true, silent = true })
@@ -26,11 +30,16 @@ vim.api.nvim_set_keymap('n', '<A-j>', '<C-w>j', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<A-k>', '<C-w>k', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-l>', '<C-w>l', { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap('n', '<A-->', '<C-w>-', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-+>', '<C-w>+', { noremap = true, silent = true })
+
 -- Alt+w and other window-related commands
 vim.api.nvim_set_keymap('n', '<A-v>', '<C-w>v', { noremap = true, silent = true })  -- Split vertically
 vim.api.nvim_set_keymap('n', '<A-s>', '<C-w>s', { noremap = true, silent = true })  -- Split horizontally
 
 
+
+vim.keymap.set('n', '<leader>h', ':noh<CR>', { noremap = true, silent = true }) -- Hide search result highliting
 vim.keymap.set('n', '<leader>ss', ':mksession! ~/session.vim<CR>', { noremap = true, silent = true })  -- Save session
 vim.keymap.set('n', '<leader>sl', ':source ~/session.vim<CR>', { noremap = true, silent = true })      -- Load session
 
