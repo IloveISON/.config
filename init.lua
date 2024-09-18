@@ -43,21 +43,24 @@ vim.keymap.set('n', '<leader>h', ':noh<CR>', { noremap = true, silent = true }) 
 vim.keymap.set('n', '<leader>ss', ':mksession! ~/session.vim<CR>', { noremap = true, silent = true })  -- Save session
 vim.keymap.set('n', '<leader>sl', ':source ~/session.vim<CR>', { noremap = true, silent = true })      -- Load session
 
+-- Barbar plugin hotkeys
+vim.keymap.set('n', '<leader>bc', '<Cmd>BufferClose<CR>', { noremap = true, silent = true}) -- Close buffer command
+
 require("config.lazy")
 -- require('lualine').setup()
 require'nvim-web-devicons'.get_icons( { default = true } )
 require('mini.pairs').setup()
 require('mini.hipatterns').setup()
 -- require('mini.icons').setup()
-require('mini.indentscope').setup()
+-- require('mini.indentscope').setup()
 require('mini.notify').setup()
-require('mini.starter').setup()
+-- require('mini.starter').setup()
 -- require('mini.statusline').setup()
-require('mini.tabline').setup({
-    show_icons = true,  -- Ensure icons are enabled
-    icons = {
-        file = '',  -- Default file icon
-        modified = '',  -- Modified file icon
-    }
-})
+-- require('mini.tabline').setup({
+--     show_icons = true,  -- Ensure icons are enabled
+--     icons = {
+--         file = '',  -- Default file icon
+--         modified = '',  -- Modified file icon
+--     }
+-- })
 require('mini.sessions').setup()
