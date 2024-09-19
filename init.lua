@@ -48,7 +48,10 @@ vim.keymap.set('n', '<leader>bc', '<Cmd>BufferClose<CR>', { noremap = true, sile
 
 require("config.lazy")
 -- require('lualine').setup()
-require'nvim-web-devicons'.get_icons( { default = true } )
+-- require'nvim-web-devicons'.get_icons( { default = true } )
+require'nvim-web-devicons'.setup(
+    { default = true }
+    )
 require('mini.pairs').setup()
 require('mini.hipatterns').setup()
 -- require('mini.icons').setup()
@@ -64,3 +67,6 @@ require('mini.notify').setup()
 --     }
 -- })
 require('mini.sessions').setup()
+
+require"nvim-treesitter.install".compilers = { "zig", "clang", "cl" } -- The C compilers for Treesitter (Windows)
+require('telescope').load_extension 'remote-sshfs' -- Loading SSH exstension
