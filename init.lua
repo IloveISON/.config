@@ -67,6 +67,6 @@ require('mini.notify').setup()
 --     }
 -- })
 require('mini.sessions').setup()
+-- require("nvim-treesitter.install".compilers = { "zig", "clang", "cl" }) -- The C compilers for Treesitter (Windows)
 
-require"nvim-treesitter.install".compilers = { "zig", "clang", "cl" } -- The C compilers for Treesitter (Windows)
 require('telescope').load_extension 'remote-sshfs' -- Loading SSH exstension

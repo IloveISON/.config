@@ -45,8 +45,12 @@ return {
       },
       line_num = {
         enable = true,
-        priority = 10,
-        style = "#E95420",
+        priority = 20,
+        style = {
+          { fg = "#E95420" },
+          { fg = "#C21f30" },
+        },
+        use_treesitter = true,
       },
       blank = {
         enable = true,

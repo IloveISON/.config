@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "jedi_language_server", "css_variables", "html", "harper_ls", "jinja_lsp", "jsonls", "dockerls"}
+        ensure_installed = { "lua_ls", "jedi_language_server", "css_variables", "html", "harper_ls", "jsonls", "dockerls"} -- To add "jinja_lsp" later
       })
     end
   },
