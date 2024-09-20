@@ -21,10 +21,19 @@ M.config = function()
 				require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
 			end,
 		},
-		window = {
-			completion = cmp.config.window.bordered(), -- Was commented originally
-			documentation = cmp.config.window.bordered(), -- Was commented originally
-		},
+
+    window = {
+			completion = cmp.config.window.bordered({
+				border = 'rounded', -- or 'single', 'double', 'shadow', etc.
+				winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder',
+			}),
+			documentation = cmp.config.window.bordered({
+				border = 'rounded', -- or 'single', 'double', 'shadow', etc.
+				winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder',
+			}),
+		}
+
+		})
 		mapping = cmp.mapping.preset.insert({
 			["<C-b>"] = cmp.mapping.scroll_docs(-4),
 			["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -49,7 +58,7 @@ M.config = function()
 					fallback() -- The fallback function sends the original key press.
 				end
 			end, { "i", "s" }), -- In Insert and Select mode
-      		}),
+      		})
 
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
@@ -59,8 +68,7 @@ M.config = function()
 		}, {
 			{ name = "buffer" },
 			{ name = "path" },
-		}),
-	})
+		})
 
 	cmp.setup.cmdline(":", {
 		mapping = cmp.mapping.preset.cmdline(),
