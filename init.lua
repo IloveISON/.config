@@ -1,11 +1,4 @@
-vim.cmd("set number")
-vim.cmd("set relativenumber")
-vim.cmd("colorscheme evening")
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-
+require("vv.core.options")
 
 vim.g.mapleader = ' ' 
 -- vim.keymap.set('n', '<leader>p', ':tabprevious<CR>', { noremap = true, silent = true })
@@ -70,3 +63,6 @@ require('mini.sessions').setup()
 -- require("nvim-treesitter.install".compilers = { "zig", "clang", "cl" }) -- The C compilers for Treesitter (Windows)
 
 require('telescope').load_extension 'remote-sshfs' -- Loading SSH exstension
+
+
+vim.cmd.colorscheme("cyberdream")
