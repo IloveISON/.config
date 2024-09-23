@@ -16,10 +16,10 @@ return {
   -- }
 
   require('nvim-treesitter.install').prefer_git = false
-  require("nvim-treesitter").setup({
+  require("nvim-treesitter.configs").setup({
     -- 'nvim-treesitter.install'.prefer_git = false,
-    ensure_installed = { "lua", "javascript", "html", "css", "python", "java", "vim", "bash", "csv", "dockerfile", "gitignore", "gitcommit", "git_config", "json", "json5", "pascal", "powershell", "pip_requirements", "sql", "yaml", "toml", "xml", "typescript" },
-    highlignt = {
+    ensure_installed = { "lua", "javascript", "html", "css", "python", "java", "vim", "bash", "csv", "dockerfile", "gitignore", "gitcommit", "git_config", "json", "json5", "pascal", "powershell", "sql", "yaml", "toml", "xml", "typescript" },
+    highlight = {
       enable = true,
       disable = {}, -- List languages to disaboe (empty = all enabled)
       additional_vim_regex_highlighting = false, -- Disable regex-based highlighting

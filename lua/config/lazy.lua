@@ -23,6 +23,12 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
+ -- Disable automatic update notifications
+  change_detection = {
+    enabled = true, -- Disable update notifications
+    notify = false,  -- Disable notifications entirely
+  },
+
   spec = {
     -- import your plugins
     { import = "plugins" },
@@ -31,5 +37,5 @@ require("lazy").setup({
   -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
-  checker = { enabled = true },
+  -- checker = { enabled = true },
 })
