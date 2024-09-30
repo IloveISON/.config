@@ -19,7 +19,7 @@ vim.keymap.set('n', '<leader>y', '"+yy<CR>', { noremap = true, silent = true })
 
 -- Setting <Left Alt> key
 vim.api.nvim_set_keymap('n', '<A-h>', ':echo "Alt+H pressed"<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>p', ':echo "Leader key testing"<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>p', ':echo "Leader key testing"<CR>', { noremap = true, silent = true })
 
 -- Remap Alt+w to behave like Ctrl+w
 vim.api.nvim_set_keymap('n', '<A-w>', '<C-w>', { noremap = true, silent = true })
