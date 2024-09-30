@@ -1,5 +1,16 @@
 require("vv.core.options")
 
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
+
+-- Use PowerShell as the default shell with UTF-8 encoding
+vim.opt.shell = "powershell.exe"
+vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+vim.opt.shellxquote = ""
+vim.opt.shellredir = "2>&1 | Out-File -Encoding UTF8 %s"
+vim.opt.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s"
+
+
 vim.g.mapleader = ' ' 
 -- vim.keymap.set('n', '<leader>p', ':tabprevious<CR>', { noremap = true, silent = true })
 -- vim.keymap.set('n', '<leader>n', ':tabnext<CR>', { noremap = true, silent = true })
@@ -64,5 +75,6 @@ require('mini.sessions').setup()
 
 require('telescope').load_extension 'remote-sshfs' -- Loading SSH exstension
 
+vim.api.nvim_set_hl(0, 'Cmdline', { bg = '#E95420', fg = '#77216F' })  -- Set your desired colors
 
 vim.cmd.colorscheme("cyberdream")
